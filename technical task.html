@@ -1,0 +1,641 @@
+<style>
+body{
+background-image: url('background.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+#centercontent{
+margin-left: auto;
+margin-right: auto;
+width: 1200px;/*586*/
+background-color: RGBA(255, 255, 255, 0.9);
+font-size: 200%
+}
+p{
+margin: 1px;
+}
+</style>
+<img src="logo.png" width="500px" height="200px" style="display: block;margin-left:auto;margin-right:auto" alt="player">
+<div id='centercontent' >
+Здесь вы можете составить ТЗ по шаблону. Просто открывайте пункты, нужные в вашей игре, копируйте шаблон или пример и редактируйте значения в своём текстовом редакторе.<br>
+Первые 3 пункта есть в <a href="https://www.youtube.com/playlist?list=PLxtw8N9RsTquNDqXq1CJF-XHbb3T6M-NQ" target="_blank">визуальном</a> и <a href="https://www.youtube.com/playlist?list=PLxtw8N9RsTqsREDAPcH7kgzEGuhJdg1Eq" target="_blank">кодовом</a> редакторе. Вы можете редактировать их там, а получившийся код прикрепить к ТЗ<br>
+--------
+<details>
+  <summary>Локации</summary>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1. Локация</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя локации:</span></strong> [Введите имя локации]</li>
+	<li><strong><span rel="font-style: inherit;">Переход на правую локацию:</span></strong> [Введите имя локации, если она есть]</li>
+    <li><strong><span rel="font-style: inherit;">Переход на левую локацию:</span></strong> [Введите имя локации, если она есть]</li>
+    <li><strong><span rel="font-style: inherit;">Эмбиент локации:</span></strong> [Введите https ссылку на mp3 файл]</li>
+    <li><strong><span rel="font-style: inherit;">Картинка локации:</span></strong> [Введите https ссылку на изображение]</li>
+    <li><strong><span rel="font-style: inherit;">Стартует ли отсюда игрок:</span></strong> [Да/Нет]</li>
+    <li><strong><span rel="font-style: inherit;">Звук ходьбы на локации:</span></strong> [Введите тип звука, например, &apos;грунтовка&apos;]</li>
+</ul>
+<h5 style="text-align: start;color: rgb(0, 0, 0);font-size: 16px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;"> Список юсейджей на локации</h5>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Юсейдж 1:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя юсейджа:</span></strong> [Введите имя]</li>
+            <li><strong><span rel="font-style: inherit;">Картинка юсейджа:</span></strong> [Введите https ссылку на картинку]</li>
+			<li><strong><span rel="font-style: inherit;">Примерное расположение юсейджа на локации:</span></strong> [К примеру в правом углу, или например рядом с дверью]</li>
+            <li><strong><span rel="font-style: inherit;">Условие активации:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Нажатие мышкой по юсейджу</li>
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Коллизия с юсейджем</li>
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Всё сразу</li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Описание того, что произойдёт после активации юсейджа:</span></strong> [Введите описание, например, &apos;игрок телепортируется на локацию (название локации)&apos;]</li>
+            <li><strong><span rel="font-style: inherit;">Начальное состояние юсейджа:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Активен</li>
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Неактивен, но видна картинка юсейджа</li>
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Неактивен и невидим</li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Состояние юсейджа после активации:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Активен</li>
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Неактивен, но видна картинка юсейджа</li>
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Неактивен и невидим</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ)</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1. Локация</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя локации:</span></strong> &quot;Лесная опушка&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Переход на правую локацию:</span></strong> &quot;Лесная поляна&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Переход на левую локацию:</span></strong> &quot;Темный лес&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Эмбиент локации:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/ambient.mp3" >https://example.com/ambient.mp3</a></li>
+    <li><strong><span rel="font-style: inherit;">Картинка локации:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/woodland.jpg" >https://example.com/woodland.jpg</a></li>
+    <li><strong><span rel="font-style: inherit;">Стартует ли отсюда игрок:</span></strong> Да</li>
+    <li><strong><span rel="font-style: inherit;">Звук ходьбы на локации:</span></strong> &quot;грунтовка&quot;</li>
+</ul>
+<h5 style="text-align: start;color: rgb(0, 0, 0);font-size: 16px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;"> Список юсейджей на локации</h5>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Юсейдж 1:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя юсейджа:</span></strong> &quot;Телепорт в замок&quot;</li>
+            <li><strong><span rel="font-style: inherit;">Картинка юсейджа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/teleport.png" >https://example.com/teleport.png</a></li>
+            <li><strong><span rel="font-style: inherit;">Примерное расположение юсейджа на локации:</span></strong> &quot;На тропе с права&quot;</li>
+			<li><strong><span rel="font-style: inherit;">Условие активации:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+ 
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Коллизия с юсейджем</li>
+
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Описание того, что произойдёт после активации юсейджа:</span></strong> Игрок телепортируется на локацию &quot;Замок&quot;.</li>
+            <li><strong><span rel="font-style: inherit;">Начальное состояние юсейджа:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Активен</li>
+
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Состояние юсейджа после активации:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Активен</li>
+
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Юсейдж 2:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя юсейджа:</span></strong> &quot;Целебная трава&quot;</li>
+            <li><strong><span rel="font-style: inherit;">Картинка юсейджа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/herb.png" >https://example.com/herb.png</a></li>
+            <li><strong><span rel="font-style: inherit;">Примерное расположение юсейджа на локации:</span></strong> &quot;Около пенька&quot;</li>
+			<li><strong><span rel="font-style: inherit;">Условие активации:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Нажатие мышкой по юсейджу</li>
+
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Описание того, что произойдёт после активации юсейджа:</span></strong> Игрок получает 5 единиц травы.</li>
+            <li><strong><span rel="font-style: inherit;">Начальное состояние юсейджа:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Активен</li>
+
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Состояние юсейджа после активации:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+<li><input type="checkbox" style="color: inherit;font-size: inherit;font-family: inherit;">&nbsp;Неактивен и невидим</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">2. Локация</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя локации:</span></strong> &quot;Лесная поляна&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Переход на левую локацию:</span></strong> &quot;Лесная опушка&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Эмбиент локации:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/ambient.mp3" >https://example.com/ambient.mp3</a></li>
+    <li><strong><span rel="font-style: inherit;">Картинка локации:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/woodland2.jpg" >https://example.com/woodland2.jpg</a></li>
+    <li><strong><span rel="font-style: inherit;">Стартует ли отсюда игрок:</span></strong> Нет</li>
+    <li><strong><span rel="font-style: inherit;">Звук ходьбы на локации:</span></strong> &quot;грунтовка&quot;</li>
+</ul>
+</details>
+<details>
+  <summary>Боевые персонажи</summary>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Персонаж</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя персонажа:</span></strong> [Введите имя]</li>
+	<li><strong><span rel="font-style: inherit;">Звуки шагов:</span></strong> [Введите ссылки, на мп3 файлы шагов]</li>
+    <li><strong><span rel="font-style: inherit;">Тип персонажа:</span></strong> [Игрок/Противник/Союзник/Неактивен]</li>
+    <li><strong><span rel="font-style: inherit;">Картинка персонажа:</span></strong> [https ссылка на изображение]</li>
+    <li><strong><span rel="font-style: inherit;">Тип картинки:</span></strong> [Обычная/Спрайтовая]</li>
+	<li><strong><span rel="font-style: inherit;">Портрет персонажа:</span></strong> [https ссылка на изображение]</li>
+    <li><strong><span rel="font-style: inherit;">Способности персонажа:</span></strong> [Введите список способностей, взятый из раздела &quot;Способности и бафы&quot;, например, [Удар костями, Бросок кости, Выстрел из лука]]</li>
+    <li><strong><span rel="font-style: inherit;">Анимации способностей:</span></strong>(если картинка спрайтовая, укажите линии анимации способностей)<ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Удар костями:</span></strong> [Введите номер линии, например, 7]</li>
+            <li><strong><span rel="font-style: inherit;">Бросок кости:</span></strong> [Введите номер линии, например, 5]</li>
+            <li><strong><span rel="font-style: inherit;">Выстрел из лука:</span></strong> [Введите номер линии, например, 4]</li>
+        </ul>
+    </li>
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ)</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Персонаж</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя персонажа:</span></strong> &quot;Скелет&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Тип персонажа:</span></strong> Противник</li>
+    <li><strong><span rel="font-style: inherit;">Картинка персонажа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/skeleton.png" >https://example.com/skeleton.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Тип картинки:</span></strong> Спрайтовая</li>
+	<li><strong><span rel="font-style: inherit;">Портрет персонажа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/skeleton.png" >https://example.com/skeleton.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Способности персонажа:</span></strong> [Удар костями, Бросок кости, Выстрел из лука]</li>
+    <li><strong><span rel="font-style: inherit;">Анимации способностей:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Удар костями:</span></strong> 7</li>
+            <li><strong><span rel="font-style: inherit;">Бросок кости:</span></strong> 5</li>
+            <li><strong><span rel="font-style: inherit;">Выстрел из лука:</span></strong> 4</li>
+        </ul>
+    </li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">2 Персонаж</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя персонажа:</span></strong> &quot;Стикмен&quot;</li>
+	<li><strong><span rel="font-style: inherit;">Звуки шагов:</span></strong> Грунтовка: <a rel="nofollow" target="_blank" href="https://example.com/stickman.png" >https://example.com/sound1.mp3</a> <a rel="nofollow" target="_blank" href="https://example.com/stickman.png" >https://example.com/sound2.mp3</a> Асфальт: <a rel="nofollow" target="_blank" href="https://example.com/stickman.png" >https://example.com/sound3.mp3</a></li>
+    <li><strong><span rel="font-style: inherit;">Тип персонажа:</span></strong> Игрок</li>
+    <li><strong><span rel="font-style: inherit;">Картинка персонажа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/stickman.png" >https://example.com/stickman.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Тип картинки:</span></strong> Обычная</li>
+	<li><strong><span rel="font-style: inherit;">Портрет персонажа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/stickman.png" >https://example.com/stickman.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Способности персонажа:</span></strong> [Быстрый удар, Точный удар]</li>
+</ul>
+</details>
+<details>
+  <summary>Диалоги</summary>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1. Диалог</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">id диалога:</span></strong> [Введите айди, например, logguard01]</li>
+    <li><strong><span rel="font-style: inherit;">Текст диалога:</span></strong> [Введите текст]</li>
+    <li><strong><span rel="font-style: inherit;">Имя автора диалога:</span></strong> [Введите имя автора, например, Страж или ???]</li>
+	<li><strong><span rel="font-style: inherit;">Действие, которое будет происходить после диалога:</span></strong> [Например будет авторизоваться квест]</li>
+    <li><strong><span rel="font-style: inherit;">Озвучка текста:</span></strong> [https ссылка на mp3 или браузерный синтезатор речи, например, &quot;Microsoft Irina Mobile - Russian (Russia)&quot;]</li>
+    <li><strong><span rel="font-style: inherit;">Картинка портрета автора диалога:</span></strong> [https ссылка на изображение]</li>
+    <li><strong><span rel="font-style: inherit;">Расположение картинки автора относительно текста:</span></strong> [С права/С лева]</li>
+    <li><strong><span rel="font-style: inherit;">Выбор следующего диалога: </span></strong>[Введите айди, на который будет переход. Если есть выбор, введите айди строк выбора]</li>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ)</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1. Диалог</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">id диалога:</span></strong> logguard01</li>
+    <li><strong><span rel="font-style: inherit;">Текст диалога:</span></strong> &quot;Я ищу приключения; Мне нужно отдохнуть&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Имя автора диалога:</span></strong> Игрок</li>
+    <li><strong><span rel="font-style: inherit;">Картинка портрета автора диалога:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/guard_portrait.png" >https://example.com/player_portrait1.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Расположение картинки автора относительно текста:</span></strong> С права</li>
+    <li><strong><span rel="font-style: inherit;">Выбор следующего диалога:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Есть выбор:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Выбор 1:</span></strong> &quot;Я ищу приключения.&quot; (id: logguard02)</li>
+                    <li><strong><span rel="font-style: inherit;">Выбор 2:</span></strong> &quot;Мне нужно отдохнуть.&quot; (id: logguard03)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">2. Диалог</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">id диалога:</span></strong> logguard02</li>
+    <li><strong><span rel="font-style: inherit;">Текст диалога:</span></strong> &quot;Приключения ждут! Будь осторожен на пути.&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Имя автора диалога:</span></strong> Страж</li>
+	<li><strong><span rel="font-style: inherit;">Озвучка текста:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/guard_voice.mp3" >https://example.com/guard_voice.mp3</a></li>
+    <li><strong><span rel="font-style: inherit;">Картинка портрета автора диалога:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/guard_portrait.png" >https://example.com/guard_portrait.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Расположение картинки автора относительно текста:</span></strong> С права</li>
+    <li><strong><span rel="font-style: inherit;">Выбор следующего диалога: </span></strong>id: logguard05
+    </li>
+</ul>
+</details>
+--------
+<details>
+  <summary>Квесты</summary>
+
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Квест</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Название квеста:</span></strong> [Введите название]</li>
+    <li><strong><span rel="font-style: inherit;">Описание квеста:</span></strong> [Введите описание]</li>
+    <li><strong><span rel="font-style: inherit;">Условия выполнения квеста:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">При каких условиях квест будет приниматься:</span></strong> [Укажите условия]</li>
+            <li><strong><span rel="font-style: inherit;">При каких условиях квест будет выполняться:</span></strong> [Укажите условия]</li>
+        </ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Награда за квест (по желанию):</span></strong> [Укажите награду]</li>
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ)</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Квест</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Название квеста:</span></strong> &quot;Тайна заброшенного замка&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Описание квеста:</span></strong> Доложите стражнику о найденном замке.</li>
+    <li><strong><span rel="font-style: inherit;">Условия выполнения квеста:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">При каких условиях квест будет приниматься:</span></strong> Игрок должен войти в локацию &quot;Замок&quot;. (Активация юсейджа: trigger5)</li>
+            <li><strong><span rel="font-style: inherit;">При каких условиях квест будет выполняться:</span></strong> Игрок должен поговорить со стражником. (Диалог: logguard08)</li>
+        </ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Награда за квест (по желанию):</span></strong> 50 опыта.</li>
+</ul>
+</details>
+<details>
+  <summary>Цвета времени суток</summary>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Цвет времени суток</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Время начала нарастания эффекта:</span></strong> [Укажите время, например, 18:00]</li>
+    <li><strong><span rel="font-style: inherit;">Время начала рассеивания эффекта:</span></strong> [Укажите время, например, 20:00]</li>
+    <li><strong><span rel="font-style: inherit;">Максимальная непрозрачность эффекта в зените:</span></strong> [Укажите значение, например, 20%]</li>
+    <li><strong><span rel="font-style: inherit;">Цвет эффекта:</span></strong> [Укажите цвет в формате hex, например, #e8c500]</li>
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ)</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Цвет времени суток</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Время начала нарастания эффекта:</span></strong> 18:00</li>
+    <li><strong><span rel="font-style: inherit;">Время начала рассеивания эффекта:</span></strong> 20:00</li>
+    <li><strong><span rel="font-style: inherit;">Максимальная непрозрачность эффекта в зените:</span></strong> 30%</li>
+    <li><strong><span rel="font-style: inherit;">Цвет эффекта:</span></strong> #ff5733</li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">2 Цвет времени суток</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Время начала нарастания эффекта:</span></strong> 4:00</li>
+    <li><strong><span rel="font-style: inherit;">Время начала рассеивания эффекта:</span></strong> 6:00</li>
+    <li><strong><span rel="font-style: inherit;">Максимальная непрозрачность эффекта в зените:</span></strong> 10%</li>
+    <li><strong><span rel="font-style: inherit;">Цвет эффекта:</span></strong> #00d0ff</li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">3 Цвет времени суток</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Время начала нарастания эффекта:</span></strong> 19:00</li>
+    <li><strong><span rel="font-style: inherit;">Время начала рассеивания эффекта:</span></strong> 7:00</li>
+    <li><strong><span rel="font-style: inherit;">Максимальная непрозрачность эффекта в зените:</span></strong> 35%</li>
+    <li><strong><span rel="font-style: inherit;">Цвет эффекта:</span></strong> #000000</li>
+</ul>
+</details>
+<details>
+  <summary>Предметы</summary>
+<ol style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Предмет</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя предмета:</span></strong> [Введите имя предмета]</li>
+			<li><strong><span rel="font-style: inherit;">Иконка предмета:</span></strong> [https ссылка на изображение]</li>
+            <li><strong><span rel="font-style: inherit;">Цвет имени:</span></strong> [Введите hex цвет (например, для эпических предметов - сиреневый, для легендарных - оранжевый)]</li>
+            <li><strong><span rel="font-style: inherit;">Описание предмета:</span></strong> [Введите описание предмета]</li>
+            <li><strong><span rel="font-style: inherit;">Цвет описания:</span></strong> [Введите hex цвет (например, для используемых предметов - светло зелёный)]</li>
+            <li><strong><span rel="font-style: inherit;">Использование предмета:</span></strong> [Что происходит при использовании и тратится ли предмет. Пропустите этот пункт, если предмет не используется. Если предмет является частью экипировки, укажите его характеристики.]</li>
+            <li><strong><span rel="font-style: inherit;">Триггер при подборе предмета из лута:</span></strong> [Например, активируется квест]</li>
+            <li><strong><span rel="font-style: inherit;">КД предмета:</span></strong> [Если предмет используемый, укажите время восстановления (например, 4 хода)]</li>
+            <li><strong><span rel="font-style: inherit;">Размер стака предмета:</span></strong> [Например, 20 предметов в ячейке]</li>
+            <li><strong><span rel="font-style: inherit;">Звук подбирания:</span></strong> [https ссылка на mp3]</li>
+            <li><strong><span rel="font-style: inherit;">Звук дропа:</span></strong> [https ссылка на mp3]</li>
+            <li><strong><span rel="font-style: inherit;">Звук использования:</span></strong> [https ссылка на mp3]</li>
+        </ul>
+    </li>
+</ol>
+<hr style="text-align: start;color: initial;font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ) для предметов</h3>
+<ol style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Предмет</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя предмета:</span></strong> Зелье здоровья</li>
+			<li><strong><span rel="font-style: inherit;">Иконка предмета:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/pickup_sound.mp3" >https://example.com/icon07.jpg</a></li>
+            <li><strong><span rel="font-style: inherit;">Цвет имени:</span></strong> #FFFFFF</li>
+            <li><strong><span rel="font-style: inherit;">Описание предмета:</span></strong> &quot;Восстанавливает 50 единиц здоровья.&quot;</li>
+            <li><strong><span rel="font-style: inherit;">Цвет описания:</span></strong> #90EE90</li>
+            <li><strong><span rel="font-style: inherit;">Использование предмета:</span></strong> &quot;При использовании восстанавливает 50 единиц здоровья. Предмет тратится.&quot;</li>
+            <li><strong><span rel="font-style: inherit;">Триггер при подборе предмета из лута:</span></strong> &quot;Активирует диалог &apos;logeren08&apos;.&quot;</li>
+            <li><strong><span rel="font-style: inherit;">КД предмета:</span></strong> 4 хода</li>
+            <li><strong><span rel="font-style: inherit;">Размер стака предмета:</span></strong> 20 предметов в ячейке</li>
+            <li><strong><span rel="font-style: inherit;">Звук подбирания:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/pickup_sound.mp3" >https://example.com/pickup_sound.mp3</a></li>
+            <li><strong><span rel="font-style: inherit;">Звук дропа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/drop_sound.mp3" >https://example.com/drop_sound.mp3</a></li>
+            <li><strong><span rel="font-style: inherit;">Звук использования:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/use_sound.mp3" >https://example.com/use_sound.mp3</a></li>
+        </ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Предмет</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя предмета:</span></strong> Меч Стража</li>
+			<li><strong><span rel="font-style: inherit;">Иконка предмета:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/pickup_sound.mp3" >https://example.com/icon15.jpg</a></li>
+            <li><strong><span rel="font-style: inherit;">Цвет имени:</span></strong> #A020F0</li>
+            <li><strong><span rel="font-style: inherit;">Описание предмета:</span></strong> &quot;Урон: 10.&quot;</li>
+            <li><strong><span rel="font-style: inherit;">Цвет описания:</span></strong> #90EE90</li>
+            <li><strong><span rel="font-style: inherit;">Использование предмета:</span></strong> &quot;Часть экипировки. Увеличивает атаку на 10 единиц.&quot;</li>
+            <li><strong><span rel="font-style: inherit;">Размер стака предмета:</span></strong> 1 предмет в ячейке</li>
+            <li><strong><span rel="font-style: inherit;">Звук подбирания:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/pickup_sound.mp3" >https://example.com/pickup_sound2.mp3</a></li>
+            <li><strong><span rel="font-style: inherit;">Звук дропа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/drop_sound.mp3" >https://example.com/drop_sound2.mp3</a></li>
+        </ul>
+    </li>
+</ol>
+</details>
+<details>
+  <summary>Противники</summary>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Группа мобов</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Список локаций, где может заспавниться группа мобов:</span></strong> [Укажите локации]</li>
+    <li><strong><span rel="font-style: inherit;">Вероятность спавна всей группы мобов в процентах:</span></strong> [Укажите процент, например, 50%]</li>
+    <li><strong><span rel="font-style: inherit;">Группа мобов:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li>[Имя моба, взятое из раздела боевых персонажей]<ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Разброс уровней моба:</span></strong> [Укажите диапазон, например, 2-3]</li>
+                    <li><strong><span rel="font-style: inherit;">Шанс спавна этого моба в группе в процентах:</span></strong> [Укажите процент, например, 100%]</li>
+                    <li><strong><span rel="font-style: inherit;">Лут:</span></strong>
+                        <ul style="font-size: 14px;border: 0px;">
+                            <li>[Имя предмета: Тонкая шкура, Минимум: 1, Максимум: 3, Шанс выпадения в процентах: 10%]</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ)</h3>
+
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Группа мобов</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Список локаций, где может заспавниться группа мобов:</span></strong> Заброшенный замок, Темный лес</li>
+    <li><strong><span rel="font-style: inherit;">Вероятность спавна всей группы мобов в процентах:</span></strong> 60%</li>
+    <li><strong><span rel="font-style: inherit;">Группа мобов:</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Скелет:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Разброс уровней моба:</span></strong> 3-5</li>
+                    <li><strong><span rel="font-style: inherit;">Шанс спавна этого моба в группе в процентах:</span></strong> 80%</li>
+                    <li><strong><span rel="font-style: inherit;">Лут:</span></strong>
+                        <ul style="font-size: 14px;border: 0px;">
+                            <li>Имя предмета: &quot;Костяной меч&quot;, Минимум: 1, Максимум: 1, Шанс выпадения в процентах: 20%</li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Призрак:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Разброс уровней моба:</span></strong> 4-6</li>
+                    <li><strong><span rel="font-style: inherit;">Шанс спавна этого моба в группе в процентах:</span></strong> 50%</li>
+                    <li><strong><span rel="font-style: inherit;">Лут:</span></strong>
+                        <ul style="font-size: 14px;border: 0px;">
+                            <li>Имя предмета: &quot;Призрачный амулет&quot;, Минимум: 1, Максимум: 2, Шанс выпадения в процентах: 15%</li>
+                            <li>Имя предмета: &quot;Пепел&quot;, Минимум: 2, Максимум: 5, Шанс выпадения в процентах: 50%</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+</details>
+
+<details>
+  <summary>Способности и бафы</summary>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Способность</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя способности:</span></strong> [Введите имя]</li>
+    <li><strong><span rel="font-style: inherit;">Иконка способности:</span></strong> [https ссылка на изображение]</li>
+	<li><strong><span rel="font-style: inherit;">Звук способности:</span></strong> [https ссылка на звук]</li>
+    <li><strong><span rel="font-style: inherit;">Время восстановления:</span></strong> [Введите время, например, 5 ходов]</li>
+    <li><strong><span rel="font-style: inherit;">Стоимость ресурса:</span></strong> [Введите стоимость, например, 10 единиц маны]</li>
+    <li><strong><span rel="font-style: inherit;">Что происходит при активации способности:</span></strong> [Введите описание, например, &apos;выбранный противник получает 10 единиц урона и на него накладывается дебаф &quot;Отравление&quot;, или к примеру случайный противник, у которого лвл ниже вашего, переходит на вашу сторону.&apos;]</li>
+    <li><strong><span rel="font-style: inherit;">Описание способности:</span></strong> [Введите текстовое описание, отображаемое при наведении на иконку]</li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Баф</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя бафа:</span></strong> [Введите имя]</li>
+    <li><strong><span rel="font-style: inherit;">Иконка бафа:</span></strong> [https ссылка на изображение]</li>
+    <li><strong><span rel="font-style: inherit;">Время действия:</span></strong> [Введите время, например, 3 хода]</li>
+    <li><strong><span rel="font-style: inherit;">Что происходит при тике бафа:</span></strong> [Введите описание, например, &apos;владелец бафа восстанавливает каждый ход 10 хп&apos;]</li>
+    <li><strong><span rel="font-style: inherit;">Описание бафа:</span></strong> [Введите текстовое описание, отображаемое при наведении на иконку]</li>
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ) для способностей</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Способность</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя способности:</span></strong> &quot;Удар костями&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Иконка способности:</span></strong> (Иконки способностей противников можно не добавлять.)</li>
+    <li><strong><span rel="font-style: inherit;">Время восстановления:</span></strong> 3 хода</li>
+    <li><strong><span rel="font-style: inherit;">Стоимость ресурса:</span></strong> 5 единиц маны</li>
+    <li><strong><span rel="font-style: inherit;">Что происходит при активации способности:</span></strong> Выбранный противник получает 15 единиц урона.</li>
+    <li><strong><span rel="font-style: inherit;">Описание способности:</span></strong> (Описание способностей противников можно не вводить.)</li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">2 Способность</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя способности:</span></strong> &quot;Призыв стража&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Иконка способности:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/summon_skeleton.png" >https://example.com/summon_skeleton.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Время восстановления:</span></strong> 15 ходов</li>
+    <li><strong><span rel="font-style: inherit;">Стоимость ресурса:</span></strong> 10 единиц маны</li>
+    <li><strong><span rel="font-style: inherit;">Что происходит при активации способности:</span></strong> Персонаж призывает &quot;Спектральный страж&quot; на свою сторону, на 3 хода.</li>
+    <li><strong><span rel="font-style: inherit;">Описание способности:</span></strong> &quot;Призывает спектрального стража, который будет сражаться на вашей стороне.&quot;</li>
+</ul>
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ) для бафов</h3>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">1 Баф</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя бафа:</span></strong> &quot;Исцеление&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Иконка бафа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/healing_buff.png" >https://example.com/healing_buff.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Время действия:</span></strong> 3 хода</li>
+    <li><strong><span rel="font-style: inherit;">Что происходит при тике бафа:</span></strong> Владелец бафа восстанавливает каждый ход 10 хп.</li>
+    <li><strong><span rel="font-style: inherit;">Описание бафа:</span></strong> &quot;Восстанавливает здоровье владельца на 10 хп каждый ход.&quot;</li>
+</ul>
+<h4 style="text-align: start;color: rgb(0, 0, 0);font-size: 18px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">2 Баф</h4>
+<ul style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Имя бафа:</span></strong> &quot;Защита&quot;</li>
+    <li><strong><span rel="font-style: inherit;">Иконка бафа:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/protection_buff.png" >https://example.com/protection_buff.png</a></li>
+    <li><strong><span rel="font-style: inherit;">Время действия:</span></strong> 4 хода</li>
+    <li><strong><span rel="font-style: inherit;">Что происходит при тике бафа:</span></strong> Владелец бафа получает 5 единиц защиты каждый ход. Если на владельца нападают, время действия бафа увеличивается на 1 ход.</li>
+    <li><strong><span rel="font-style: inherit;">Описание бафа:</span></strong> &quot;Увеличивает защиту владельца на 5 единиц каждый ход.&quot;</li>
+</ul>
+</details>
+<details>
+  <summary>Окно экипировки персонажа</summary>
+<ol style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Окно экипировки персонажа</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Фоновая картинка:</span></strong> [https ссылка на изображение фона]</li>
+            <li><strong><span rel="font-style: inherit;">Картинка расположения ячеек:</span></strong> [https ссылка на изображение с примером расположения ячеек]</li>
+        </ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Ячейки экипировки</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Ячейка 1:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Называние слота экипировки:</span></strong> [Введите название слота (например, голова, торс, ноги, обувь)]</li>
+                    <li><strong><span rel="font-style: inherit;">Экипированный предмет:</span></strong> [Пропустите пункт, если слот пустой, или имя предмета, если в ячейке есть предмет со старта игры.]</li>
+                    <li><strong><span rel="font-style: inherit;">Картинка самой ячейки:</span></strong> [https ссылка на изображение ячейки]</li>
+                </ul>
+            </li>
+
+            <li>[Добавьте дополнительные ячейки по необходимости]</li>
+        </ul>
+    </li>
+</ol>
+<hr style="text-align: start;color: initial;font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ) для окна экипировки персонажа</h3>
+<ol style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Окно экипировки персонажа</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Фоновая картинка:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/background_image.png" >https://example.com/background_image.png</a></li>
+            <li><strong><span rel="font-style: inherit;">Картинка расположения ячеек:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/layout_image.png" >https://example.com/layout_image.png</a></li>
+        </ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Ячейки экипировки</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Ячейка 1:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Называние слота экипировки:</span></strong> Оружие</li>
+                    <li><strong><span rel="font-style: inherit;">Картинка самой ячейки:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/slot_head.png" >https://example.com/slot_head.png</a></li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Ячейка 2:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Называние слота экипировки:</span></strong> Торс</li>
+                    <li><strong><span rel="font-style: inherit;">Экипированный предмет:</span></strong> Броня Стража</li>
+                    <li><strong><span rel="font-style: inherit;">Картинка самой ячейки:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/slot_torso.png" >https://example.com/slot_torso.png</a></li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Ячейка 3:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Называние слота экипировки:</span></strong> Ноги</li>
+                    <li><strong><span rel="font-style: inherit;">Экипированный предмет:</span></strong> Штаны Стража</li>
+                    <li><strong><span rel="font-style: inherit;">Картинка самой ячейки:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/slot_legs.png" >https://example.com/slot_legs.png</a></li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Ячейка 4:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Называние слота экипировки:</span></strong> Обувь</li>
+                    <li><strong><span rel="font-style: inherit;">Экипированный предмет:</span></strong> Ботинки Стража</li>
+                    <li><strong><span rel="font-style: inherit;">Картинка самой ячейки:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/slot_feet.png" >https://example.com/slot_feet.png</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+</details>
+<details>
+  <summary>Торговцы или верстаки</summary>
+<ol style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Торговцы или верстаки</span></strong> [Может быть 2 в 1]
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя торговца:</span></strong> [Введите имя торговца]</li>
+            <li><strong><span rel="font-style: inherit;">Картинка:</span></strong> [https ссылка на изображение торговца]</li>
+            <li><strong><span rel="font-style: inherit;">Список продаваемых предметов</span></strong></li>
+        </ul>
+        <ol style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предмет:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Название предмета:</span></strong> [Введите название предмета]</li>
+                    <li><strong><span rel="font-style: inherit;">Требуемые ресурсы:</span></strong> [Введите список ресурсов, например, &quot;вода, яйца, мука&quot;]</li>
+                    <li><strong><span rel="font-style: inherit;">Стоимость предмета у этого торговца:</span></strong> [Введите стоимость, например, 5 монет. Если стоимость не указывается, оставьте пустым.]</li>
+                    <li><strong><span rel="font-style: inherit;">Оставшееся количество этого товара у торговца:</span></strong> [Введите количество. Если товар не ограничен, пропустите этот пункт.]</li>
+                </ul>
+            </li>
+
+            <li>[Добавьте дополнительные предметы по необходимости]</li>
+        </ol>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предметы, покупаемые этим торговцем</span></strong></li>
+        </ul>
+        <ol style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предмет:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Имя предмета:</span></strong> [Введите имя предмета]</li>
+                    <li><strong><span rel="font-style: inherit;">Цена продажи этому торговцу:</span></strong> [Введите цену продажи]</li>
+                </ul>
+            </li>
+
+            <li>[Добавьте дополнительные предметы по необходимости]</li>
+        </ol>
+        <ul style="font-size: 14px;border: 0px;"></ul>
+    </li>
+</ol>
+<hr style="text-align: start;color: initial;font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">
+<h3 style="text-align: start;color: rgb(0, 0, 0);font-size: 21px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Пример Технического Задания (ТЗ) для торговцев и верстаков</h3>
+<ol style="text-align: start;color: rgb(51, 51, 51);font-size: 14px;font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;border: 0px;">
+    <li><strong><span rel="font-style: inherit;">Торговец</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя торговца:</span></strong> Пекарь</li>
+            <li><strong><span rel="font-style: inherit;">Картинка:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/baker_image.png" >https://example.com/baker_image.png</a></li>
+            <li><strong><span rel="font-style: inherit;">Список продаваемых предметов</span></strong></li>
+        </ul>
+        <ol style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предмет 1:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Название предмета:</span></strong> Пирог</li>
+                    <li><strong><span rel="font-style: inherit;">Стоимость предмета у этого торговца:</span></strong> 8 монет</li>
+                    <li><strong><span rel="font-style: inherit;">Оставшееся количество этого товара у торговца:</span></strong> 5</li>
+                </ul>
+            </li>
+        </ol>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предметы, покупаемые этим торговцем</span></strong></li>
+        </ul>
+        <ol style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предмет 1:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Имя предмета:</span></strong> Яйца</li>
+                    <li><strong><span rel="font-style: inherit;">Цена продажи этому торговцу:</span></strong> 2 монеты</li>
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Предмет 2:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Имя предмета:</span></strong> Мука</li>
+                    <li><strong><span rel="font-style: inherit;">Цена продажи этому торговцу:</span></strong> 1 монета</li>
+                </ul>
+            </li>
+        </ol>
+        <ul style="font-size: 14px;border: 0px;"></ul>
+    </li>
+    <li><strong><span rel="font-style: inherit;">Верстак</span></strong>
+        <ul style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Имя верстака:</span></strong> Кухонный миксер</li>
+            <li><strong><span rel="font-style: inherit;">Картинка:</span></strong> <a rel="nofollow" target="_blank" href="https://example.com/baker_image.png" >https://example.com/mixer_image.png</a></li>
+            <li><strong><span rel="font-style: inherit;">Список продаваемых предметов</span></strong></li>
+        </ul>
+        <ol style="font-size: 14px;border: 0px;">
+            <li><strong><span rel="font-style: inherit;">Предмет 1:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Название предмета:</span></strong> Тесто</li>
+                    <li><strong><span rel="font-style: inherit;">Требуемые ресурсы:</span></strong> вода, мука, дрожжи</li>
+
+                </ul>
+            </li>
+            <li><strong><span rel="font-style: inherit;">Предмет 2:</span></strong>
+                <ul style="font-size: 14px;border: 0px;">
+                    <li><strong><span rel="font-style: inherit;">Название предмета:</span></strong> Коктейль</li>
+                    <li><strong><span rel="font-style: inherit;">Требуемые ресурсы:</span></strong> молоко(x2), сахар</li>
+
+                </ul>
+            </li>
+
+        </ol>
+        
+    </li>
+</ol>
+</details>
+<!--
+<details>
+  <summary>Диалоги</summary>
+
+</details>
+-->
+</div>
