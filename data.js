@@ -19,6 +19,11 @@
             avatarUrl: 'https://img.itch.zone/aW1nLzI0NDMzNDAyLnBuZw==/original/LI1xmf.png',
             sign: ''
         },
+	   'Noiz AI': {
+            profileUrl: 'https://noiz.ai/',
+            avatarUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEX/////393/2df/2tn/7Ov/8fD/u7j/qqb/p6P/rqr/5uX/9PP/+vr/j4n+iYP/zsv/pJ//lI7/l5H/xsP/ubX+sq/+hH7+fHX+eHH+dG3+wr/+cmr+e3T/09H+bGP+WlH+XlX+U0r+Y1v+UEUMO0KLAAAAsElEQVR4AdXLRRLDMBBE0dGYmZmt+98xHdJstUza+OqX6P+m2GFX6ICekR8EIUuMQGUX3TiOPYkxlhglWJp6npcITQyzLC+KPMvKFyuQTQyqKiuKrKrCF2tQYtO2rVJ4NS/6bdvFZLUyz/vXIa/P84EykE2sx2GaCXOXYVioX4dpkziNyzvu47jTMI4Los3mrotY2IGxUX+cVyvxBguJ13F1Es/j0BIVM7sSGfPoF/cAuh8KmpKVIA4AAAAASUVORK5CYII=',
+            sign: ''
+        },
         
     };
     const assets = [
@@ -508,6 +513,40 @@ Drop a link to ravenmore.itch.io, that's all ;) Cheers!`,
     'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Abilities/sword5.mp3',
     'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Abilities/throw1.mp3',
     'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Abilities/throw2.mp3',
+
+]
+        },
+		{ 
+            id: 0, 
+            types: ['Предметы', 'Звуки'], 
+            authors: ['Ludo.ai'],
+            name: 'Звуки предметов', 
+            desc: 'Звуки подбора, дропа и использования предметов.', 
+            previewImg: 'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/preview.png', 
+            files: [
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/drop2.mp3',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/drop3.mp3',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/drop4.mp3',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/bag1.mp3',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/bag2.mp3',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/bottle.mp3',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Items/drop1.mp3'
+
+]
+        },
+		{ 
+            id: 0, 
+            types: ['Эмбиент', 'Звуки'], 
+            authors: ['Noiz AI'],
+            name: 'Звуки способностей', 
+            desc: 'Звуки магических и физических способностей', 
+            previewImg: 'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Ambient/preview.png', 
+            files: [
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Ambient/sound_design_1785428810856.wav',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Ambient/sound_design_1785429046503.wav',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Ambient/sound_design_1785429185902.wav',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Ambient/sound_design_1785429372347.wav',
+    'https://raw.githubusercontent.com/proginvert/1D-RPG-Constructor/refs/heads/main/Assets/Ambient/sound_design_1785428615653.wav'
 
 ]
         },
