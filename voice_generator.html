@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синтезатор речи Chrome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .play-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+        .play-btn:hover {
+            background-color: #45a049;
+        }
+        /* Стили для блока копирования имени голоса */
+        .voice-info-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+            background: #eef2f7;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px dashed #b0c4de;
+        }
+        .voice-name-display {
+            flex-grow: 1;
+            font-family: monospace;
+            font-size: 14px;
+            color: #333;
+            word-break: break-all;
+            user-select: all; /* Позволяет выделить текст одним кликом */
+        }
+        .copy-btn {
+            width: auto;
+            padding: 4px 12px;
+            font-size: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Синтезатор речи</h1>
+
+    <!-- Выпадающее меню выбора голоса -->
+    <div class="form-group">
+        <label for="voice-select">Выберите голос:</label>
+        <select id="voice-select">
+            <option value="">Загрузка голосов...</option>
+        </select>
+        
+        <!-- Блок отображения точного имени и кнопка копирования -->
+        <div class="voice-info-box">
+            <div id="voice-name-display" class="voice-name-display">Имя голоса появится здесь</div>
+            <button id="copy-btn" class="copy-btn">Копировать имя</button>
+        </div>
+    </div>
+
+    <!-- Поле ввода текста -->
+    <div class="form-group">
+        <label for="text-input">Введите текст:</label>
+        <textarea id="text-input" placeholder="Введите текст, который нужно озвучить...">Привет! Это проверка синтезатора речи в браузере Google Chrome.</textarea>
+    </div>
+
+    <!-- Кнопка воспроизведения -->
+    <button id="play-btn" class="play-btn">Воспроизвести</button>
+
+    <script>
+        const synth = window.speechSynthesis;
+        const voiceSelect = document.getElementById('voice-select');
+        const textInput = document.getElementById('text-input');
+        const playBtn = document.getElementById('play-btn');
+        const voiceNameDisplay = document.getElementById('voice-name-display');
+        const copyBtn = document.getElementById('copy-btn');
+
+        let voices = [];
+
+        // Функция обновления текста в диве с именем голоса
+        function updateSelectedVoiceName() {
+            const selectedOption = voiceSelect.selectedOptions[0];
+            if (selectedOption) {
+                const name = selectedOption.getAttribute('data-name');
+                voiceNameDisplay.textContent = name || '';
+            }
+        }
+
+        // Функция заполнения списка доступных голосов
+        function populateVoiceList() {
+            if (typeof synth === 'undefined') return;
+
+            voices = synth.getVoices();
+            voiceSelect.innerHTML = '';
+
+            voices.forEach((voice) => {
+                const option = document.createElement('option');
+                option.textContent = `${voice.name} (${voice.lang})`;
+                
+                if (voice.default) {
+                    option.textContent += ' — ПО УМОЛЧАНИЮ';
+                }
+
+                option.setAttribute('data-lang', voice.lang);
+                option.setAttribute('data-name', voice.name);
+                voiceSelect.appendChild(option);
+            });
+
+            // Обновляем имя сразу после загрузки списка
+            updateSelectedVoiceName();
+        }
+
+        populateVoiceList();
+        if (typeof synth !== 'undefined' && synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = populateVoiceList;
+        }
+
+        // Следим за изменением выбора в меню
+        voiceSelect.addEventListener('change', updateSelectedVoiceName);
+
+        // Функция озвучивания текста
+        function speak() {
+            if (synth.speaking) {
+                synth.cancel();
+            }
+
+            if (textInput.value !== '') {
+                const utterThis = new SpeechSynthesisUtterance(textInput.value);
+                const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+                const selectedVoice = voices.find(voice => voice.name === selectedOption);
+                
+                if (selectedVoice) {
+                    utterThis.voice = selectedVoice;
+                }
+
+                synth.speak(utterThis);
+            }
+        }
+
+        playBtn.addEventListener('click', speak);
+
+        // Функция копирования в буфер обмена
+        copyBtn.addEventListener('click', () => {
+            const textToCopy = voiceNameDisplay.textContent;
+            
+            if (textToCopy && textToCopy !== 'Имя голоса появится здесь') {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const originalText = copyBtn.textContent;
+                    copyBtn.textContent = 'Скопировано!';
+                    copyBtn.style.backgroundColor = '#28a745'; // Меняем цвет на зеленый
+                    
+                    // Возвращаем исходный текст кнопки через 1.5 секунды
+                    setTimeout(() => {
+                        copyBtn.textContent = originalText;
+                        copyBtn.style.backgroundColor = '#007bff';
+                    }, 1500);
+                }).catch(err => {
+                    console.error('Ошибка копирования: ', err);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
